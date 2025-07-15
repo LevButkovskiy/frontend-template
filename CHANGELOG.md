@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/LevButkovskiy/frontend-template/compare/v1.1.0...v1.1.1) (2025-07-15)
+
+
+### Bug Fixes
+
+* manifest for development ([94ebea9](https://github.com/LevButkovskiy/frontend-template/commit/94ebea962919c551c58559b62305278674d5dbf7))
+
 # [1.1.0](https://github.com/LevButkovskiy/frontend-template/compare/v1.0.0...v1.1.0) (2025-07-15)
 
 
