@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/LevButkovskiy/frontend-template/compare/v1.1.1...v1.2.0) (2025-07-15)
+
+
+### Features
+
+* add less and file structure ([9811a48](https://github.com/LevButkovskiy/frontend-template/commit/9811a48a0008710e0d369cf1bcb3344efba2a797))
+
 ## [1.1.1](https://github.com/LevButkovskiy/frontend-template/compare/v1.1.0...v1.1.1) (2025-07-15)
 
 
