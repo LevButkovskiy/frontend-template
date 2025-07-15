@@ -1,0 +1,26 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "semi": false,
+  "useTabs": true,
+  "tabWidth": 2,
+  "plugins": [],
+  "importOrder": ["^dotenv", "^node:(.*)$", "<THIRD_PARTY_MODULES>", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "overrides": [
+    {
+      "files": ["*.json", ".prettierrc"],
+      "options": {
+        "parser": "json"
+      }
+    },
+    {
+      "files": "*.ts*",
+      "options": {
+        "parser": "typescript"
+      }
+    }
+  ],
+  "endOfLine": "lf"
+}
