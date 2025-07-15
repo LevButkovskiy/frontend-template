@@ -1,49 +1,48 @@
 # Frontend Template
 
-Шаблон фронтенд приложения на базе **React**, **TypeScript** и **Vite**. Проект содержит минимум настроек для быстрого старта, включая ESLint и поддержку PWA.
+Template for a frontend application built with **React**, **TypeScript**, and **Vite**. The project provides minimal configuration for a quick start, including ESLint and PWA support.
 
-## Стек
+## Stack
 
-- React 19 и React Router 7
+- React 19 and React Router 7
 - TypeScript
-- Less для стилизации
-- Vite для разработки и сборки
-- vite-plugin-pwa для генерации service worker и манифеста
+- Less for styling
+- Vite for development and builds
+- vite-plugin-pwa to generate the service worker and manifest
 
-## Требования
+## Requirements
 
 - Node.js >= 20.19.0
 - npm >= 11.4.2
 
-## Быстрый старт
+## Quick start
 
 ```bash
-npm ci          # установка зависимостей
-npm run dev     # режим разработки
-npm run build   # сборка проекта
-npm run preview # локальный просмотр собранной версии
+npm ci          # install dependencies
+npm run dev     # start development mode
+npm run build   # build the project
+npm run preview # preview the production build
 ```
 
-## Структура проекта
+## Project structure
 
 ```
 frontend-template/
-├── public/                 # статические файлы
+├── public/                 # static files
 ├── src/
-│   ├── assets/             # изображения и другие ассеты
-│   ├── components/         # переиспользуемые компоненты
-│   ├── pages/              # страницы, используемые в роутинге
-│   ├── router/             # конфигурация маршрутов
-│   ├── App.tsx             # корневой компонент
-│   ├── main.tsx            # точка входа приложения
-│   └── index.css           # глобальные стили
-├── Dockerfile              # сборка контейнера
-├── docker-compose.yml      # пример развертывания
-├── vite.config.ts          # конфигурация Vite и PWA
+│   ├── assets/             # images and other assets
+│   ├── components/         # reusable components
+│   ├── pages/              # pages used in routing
+│   ├── router/             # routing configuration
+│   ├── App.tsx             # root component
+│   ├── main.tsx            # application entry point
+│   └── index.css           # global styles
+├── Dockerfile              # container build
+├── docker-compose.yml      # deployment example
+├── vite.config.ts          # Vite and PWA configuration
 └── ...
 ```
 
-## Дополнительная информация
+## Additional information
 
-В `vite.config.ts` настроен плагин `vite-plugin-pwa`, который создаёт service worker и манифест. Иконки приложения размещаются в `public/icons`. Конфигурацию ESLint при необходимости можно расширить в файле `eslint.config.js`.
-
+The `vite-plugin-pwa` plugin is configured in `vite.config.ts` to generate a service worker and manifest. Application icons reside in `public/icons`. ESLint configuration can be extended in `eslint.config.js` if required.
