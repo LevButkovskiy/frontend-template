@@ -1,7 +1,14 @@
-import { Home } from './pages/Home'
+import { Link, Outlet } from 'react-router-dom'
 
 function App() {
-	return <Home />
+  return (
+    <>
+      <nav>
+        <Link to="/">Home</Link> | <Link to="/about">About</Link>
+      </nav>
+      <Outlet />
+    </>
+  )
 }
 
 export default App
