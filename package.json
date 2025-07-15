@@ -11,6 +11,8 @@
     "release": "semantic-release"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
+    "less": "^4.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
