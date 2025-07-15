@@ -72,3 +72,7 @@ export default tseslint.config([
 
 - node >= 20.19.0
 - npm >= 11.4.2
+
+### PWA
+
+This template integrates [vite-plugin-pwa](https://vite-plugin-pwa.netlify.app/) to generate a service worker and manifest. Icons are stored in `public/icons` \(the empty folder is kept in Git using `.gitkeep` until real icons are added\). The plugin's `includeAssets` option copies the listed files from `public` into the production build so the iOS icon ships correctly.
