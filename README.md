@@ -1,84 +1,48 @@
-# React + TypeScript + Vite
+# Frontend Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Template for a frontend application built with **React**, **TypeScript**, and **Vite**. The project provides minimal configuration for a quick start, including ESLint and PWA support.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19 and React Router 7
+- TypeScript
+- Less for styling
+- Vite for development and builds
+- vite-plugin-pwa to generate the service worker and manifest
 
-## Expanding the ESLint configuration
+## Requirements
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-	globalIgnores(['dist']),
-	{
-		files: ['**/*.{ts,tsx}'],
-		extends: [
-			// Other configs...
-
-			// Remove tseslint.configs.recommended and replace with this
-			...tseslint.configs.recommendedTypeChecked,
-			// Alternatively, use this for stricter rules
-			...tseslint.configs.strictTypeChecked,
-			// Optionally, add this for stylistic rules
-			...tseslint.configs.stylisticTypeChecked,
-
-			// Other configs...
-		],
-		languageOptions: {
-			parserOptions: {
-				project: ['./tsconfig.node.json', './tsconfig.app.json'],
-				tsconfigRootDir: import.meta.dirname,
-			},
-			// other options...
-		},
-	},
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-	globalIgnores(['dist']),
-	{
-		files: ['**/*.{ts,tsx}'],
-		extends: [
-			// Other configs...
-			// Enable lint rules for React
-			reactX.configs['recommended-typescript'],
-			// Enable lint rules for React DOM
-			reactDom.configs.recommended,
-		],
-		languageOptions: {
-			parserOptions: {
-				project: ['./tsconfig.node.json', './tsconfig.app.json'],
-				tsconfigRootDir: import.meta.dirname,
-			},
-			// other options...
-		},
-	},
-])
-```
-
-### Requirements
-
-- node >= 20.19.0
+- Node.js >= 20.19.0
 - npm >= 11.4.2
 
-### PWA
+## Quick start
 
-This template integrates [vite-plugin-pwa](https://vite-plugin-pwa.netlify.app/) to generate a service worker and manifest. Icons are stored in `public/icons` \(the empty folder is kept in Git using `.gitkeep` until real icons are added\). The plugin's `includeAssets` option copies the listed files from `public` into the production build so the iOS icon ships correctly.
+```bash
+npm ci          # install dependencies
+npm run dev     # start development mode
+npm run build   # build the project
+npm run preview # preview the production build
+```
 
-## File structure
+## Project structure
 
-src/assets — Static assets used across the project (images, icons, fonts, etc.).
-src/components — Reusable shared UI components used throughout the application.
-src/pages — Top-level views or pages, typically used in routing.
+```
+frontend-template/
+├── public/                 # static files
+├── src/
+│   ├── assets/             # images and other assets
+│   ├── components/         # reusable components
+│   ├── pages/              # pages used in routing
+│   ├── router/             # routing configuration
+│   ├── App.tsx             # root component
+│   ├── main.tsx            # application entry point
+│   └── index.css           # global styles
+├── Dockerfile              # container build
+├── docker-compose.yml      # deployment example
+├── vite.config.ts          # Vite and PWA configuration
+└── ...
+```
+
+## Additional information
+
+The `vite-plugin-pwa` plugin is configured in `vite.config.ts` to generate a service worker and manifest. Application icons reside in `public/icons`. ESLint configuration can be extended in `eslint.config.js` if required.
