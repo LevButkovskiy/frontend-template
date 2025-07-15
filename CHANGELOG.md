@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/LevButkovskiy/frontend-template/compare/v1.3.0...v1.4.0) (2025-07-15)
+
+
+### Features
+
+* add layout component and apply globally ([7e417a9](https://github.com/LevButkovskiy/frontend-template/commit/7e417a91823b8badd6de2dc414538060bf37c973))
+
 # [1.3.0](https://github.com/LevButkovskiy/frontend-template/compare/v1.2.0...v1.3.0) (2025-07-15)
 
 
