@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/LevButkovskiy/frontend-template/compare/v1.2.0...v1.3.0) (2025-07-15)
+
+
+### Features
+
+* **router:** use createBrowserRouter ([07e8e23](https://github.com/LevButkovskiy/frontend-template/commit/07e8e2353c236857cfb757cbdff9220da8a1b654))
+
 # [1.2.0](https://github.com/LevButkovskiy/frontend-template/compare/v1.1.1...v1.2.0) (2025-07-15)
 
 
