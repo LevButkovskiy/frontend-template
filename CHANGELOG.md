@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/LevButkovskiy/frontend-template/compare/v1.4.0...v1.4.1) (2025-07-16)
+
+
+### Bug Fixes
+
+* deploy after release ([2619efe](https://github.com/LevButkovskiy/frontend-template/commit/2619efebd40a12f1526e1631f16e06500903d144))
+
 # [1.4.0](https://github.com/LevButkovskiy/frontend-template/compare/v1.3.0...v1.4.0) (2025-07-15)
 
 
