@@ -46,3 +46,26 @@ frontend-template/
 ## Additional information
 
 The `vite-plugin-pwa` plugin is configured in `vite.config.ts` to generate a service worker and manifest. Application icons reside in `public/icons`. ESLint configuration can be extended in `eslint.config.js` if required.
+
+## Deployment
+
+The `deploy.yml` workflow builds a Docker image, pushes it to your registry and
+then connects to the target server via SSH. On the server a `docker-compose.yml`
+file is created automatically:
+
+```yaml
+version: '3.9'
+services:
+  frontend:
+    image: <registry>/<image>:latest
+    restart: always
+    ports:
+      - '80:80'
+    environment:
+      NODE_ENV: production
+```
+
+Secrets must provide registry credentials (`REGISTRY_URL`, `REGISTRY_USERNAME`,
+`REGISTRY_PASSWORD`), image name (`IMAGE_NAME`), and SSH access (`SSH_HOST`,
+`SSH_USERNAME`, `SSH_PRIVATE_KEY`, `DEPLOY_PATH`).
+

@@ -47,3 +47,22 @@ frontend-template/
 
 В `vite.config.ts` настроен плагин `vite-plugin-pwa`, который создаёт service worker и манифест. Иконки приложения размещаются в `public/icons`. Конфигурацию ESLint при необходимости можно расширить в файле `eslint.config.js`.
 
+## Развертывание
+
+`deploy.yml` собирает Docker-образ, публикует его в реестре и подключается к серверу по SSH. На сервере автоматически создаётся `docker-compose.yml` такого вида:
+
+```yaml
+version: '3.9'
+services:
+  frontend:
+    image: <registry>/<image>:latest
+    restart: always
+    ports:
+      - '80:80'
+    environment:
+      NODE_ENV: production
+```
+
+Необходимо добавить секреты для доступа к реестру (`REGISTRY_URL`, `REGISTRY_USERNAME`, `REGISTRY_PASSWORD`), имени образа (`IMAGE_NAME`) и SSH (`SSH_HOST`, `SSH_USERNAME`, `SSH_PRIVATE_KEY`, `DEPLOY_PATH`).
+
+
