@@ -50,8 +50,10 @@ The `vite-plugin-pwa` plugin is configured in `vite.config.ts` to generate a ser
 ## Deployment
 
 The `deploy.yml` workflow builds a Docker image, pushes it to your registry and
-then connects to the target server via SSH. On the server a `docker-compose.yml`
-file is created automatically:
+then connects to the target server via SSH. It is triggered automatically once
+the `Release` workflow finishes, ensuring the latest version produced by
+`semantic-release` is deployed. On the server a `docker-compose.yml` file is
+created automatically:
 
 ```yaml
 version: '3.9'
